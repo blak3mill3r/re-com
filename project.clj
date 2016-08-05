@@ -4,7 +4,7 @@
 
 ;; ---------------------------------------------------------------------------------------
 
-(defproject         re-com "0.8.3"
+(defproject         re-com "0.8.4-SNAPSHOT"
   :description      "Reusable UI components for Reagent"
   :url              "https://github.com/Day8/re-com.git"
   :license          {:name "MIT"}
@@ -53,7 +53,7 @@
 
   :cljsbuild {:builds [{:id           "demo"
                         :source-paths ["src"]
-                        :figwheel     {:on-jsload     "re-demo.core/mount-demo"}
+                        :figwheel     {:on-jsload     "re-demo.core/mount-demo" :server-port 3448}
                         :compiler     {:output-to     "run/resources/public/compiled_dev/demo.js"
                                        :output-dir    "run/resources/public/compiled_dev/demo"
                                        :main          "re-demo.core"

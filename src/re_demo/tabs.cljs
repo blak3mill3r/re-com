@@ -5,7 +5,7 @@
             [re-com.tabs             :refer [tabs-args-desc]]
             [re-com.util             :refer [item-for-id]]
             [re-demo.utils           :refer [panel-title title2 args-table github-hyperlink status-text]]
-            [alandipert.storage-atom :refer [local-storage]]
+            #_[alandipert.storage-atom :refer [local-storage]]
             [reagent.core            :as    reagent]))
 
 
@@ -93,6 +93,7 @@
                                :child   [:p (:say-this (item-for-id @selected-tab-id tabs-definition))]]]]]])))
 
 
+(defn local-storage [& _] nil)
 (defn remembers-demo
   []
   (let [tab-defs        [{:id ::1 :label "1"}
