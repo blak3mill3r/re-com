@@ -52,7 +52,7 @@
 
   :cljsbuild {:builds [{:id           "demo"
                         :source-paths ["src"]
-                        :figwheel     {:on-jsload     "re-demo.core/mount-demo" :server-port 3448}
+                        :figwheel     {:on-jsload     "re-demo.core/mount-demo"}
                         :compiler     {:output-to     "run/resources/public/compiled_dev/demo.js"
                                        :output-dir    "run/resources/public/compiled_dev/demo"
                                        :main          "re-demo.core"

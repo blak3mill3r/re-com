@@ -3,7 +3,7 @@
                    [secretary.core         :refer [defroute]])
   (:require [goog.events                   :as    events]
             [reagent.core                  :as    reagent]
-            #_[alandipert.storage-atom       :refer [local-storage]]
+            [alandipert.storage-atom       :refer [local-storage]]
             [secretary.core                :as    secretary]
             [re-com.core                   :refer [h-box v-box box gap line scroller border label title alert-box] :refer-macros [handler-fn]]
             [re-com.util                   :refer [get-element-by-id item-for-id]]
@@ -165,7 +165,6 @@
 
 ;; -- Routes, Local Storage and History ------------------------------------------------------
 
-(defn local-storage [& _] nil)
 (def id-store        (local-storage (atom nil) ::id-store))
 (def selected-tab-id (reagent/atom (if (or (nil? @id-store) (nil? (item-for-id @id-store tabs-definition)))
                                      (:id (first tabs-definition))
